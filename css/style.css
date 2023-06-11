@@ -1,0 +1,474 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-image: url(/img/backgroundHeader.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    width: 100vmax;
+}
+
+.logo {
+    width: 7rem;
+    margin: 2rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: grey;
+}
+
+.contenido {
+    background-image: url(/img/backgroundContenido.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100vmax;
+    display: inline-block;
+    background-size: 100% auto;
+}
+
+.historia {
+    width: 60%;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.historia h5 {
+    font-size: 1.3rem;
+    margin: 0 auto;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.historia p {
+    padding: 1rem;
+    width: 80%;
+    text-align: justify;
+    line-height: 190%;
+    font-size: 0.8rem;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100vmax;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    padding: 1rem;
+    color: black;
+    background-image: url(/img/backgroundFooter.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+
+footer h5 {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+footer h6 {
+    font-size: 0.6rem;
+    font-style: italic;
+}
+
+.contacto {
+    margin-left: 2rem;
+}
+
+
+
+.redes {
+    display: flex;
+
+}
+
+.redes img {
+    height: 1rem;
+    margin: 0.3rem;
+}
+
+.redes p {
+    margin: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.sucursales {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.ubicacionSucursal {
+    display: flex;
+}
+
+.ubicacionSucursal p {
+    font-size: 0.8rem;
+    margin: 0.3rem;
+}
+
+.ubicacionSucursal img {
+    height: 1rem;
+    margin: 0.3rem;
+}
+
+.suscripcion {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+}
+
+/* PRODUCTOS */
+
+.nuestrosGins {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 65%;
+
+    margin: 1rem;
+
+
+}
+
+.card-body {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn {
+    background-color: #EAD8CB;
+    border-color: #D1B28A;
+    color: rgb(97, 61, 31);
+
+}
+
+
+
+.btn-primary:hover {
+    background-color: rgb(133, 101, 75);
+    border-color: #D1B28A;
+    color: white;
+}
+
+em {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    font-weight: 500;
+}
+
+
+.btn-primary:active {
+    background-color: rgb(133, 101, 75);
+    border-color: rgb(97, 61, 31);
+    color: white;
+}
+
+.presentacionProducto {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+.producto {
+    width: 70%;
+    overflow: hidden;
+}
+
+.producto img {
+    width: 90%;
+    height: auto;
+    transition: transform 0.3s ease;
+
+}
+
+.producto:hover img {
+    transform: scale(1.4);
+
+}
+
+
+.ingredientes {
+    margin-left: 2rem;
+    width: 40%;
+}
+
+.ingredientes img {
+    width: 1.5rem;
+}
+
+.ingredientes p {
+    font-size: 16px;
+}
+
+/* SUCURSALES */
+
+.locales {
+    align-items: center;
+    min-width: 100vw;
+    display: flex;
+    height: 35rem;
+}
+
+.cardSucursal {
+
+    position: relative;
+    width: 25rem;
+    height: 18.75rem;
+    border: none;
+    margin: auto 1.5rem;
+}
+
+.cardSucursal section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: 1s;
+
+}
+
+.cardSucursal .frente {
+    transform: perspective(500px) rotateY(0deg)
+}
+
+.cardSucursal .dorso {
+    flex-direction: column;
+    background: beige;
+    transform: perspective(500px) rotateY(180deg)
+}
+
+
+.cardSucursal:hover .frente {
+    transform: perspective(500px) rotateY(180deg)
+}
+
+.cardSucursal:hover .dorso {
+    display: flex;
+    flex-direction: column;
+    transform: perspective(500px) rotateY(360deg)
+}
+
+.locales .Puerto .cardSucursal .frente {
+    background-image: url(/img/Locales/Puerto.webp);
+    background-size: contain;
+}
+
+.locales .Constitucion .cardSucursal .frente {
+    background-image: url(/img/Locales/constitucion.webp);
+    background-size: contain;
+}
+
+.locales .Guemes .cardSucursal .frente {
+    background-image: url(/img/Locales/Guemes.webp);
+    background-size: contain;
+}
+
+.cardSucursal .dorso img {
+    width: 2rem;
+}
+
+.cardSucursal a {
+    text-decoration: none;
+    color: rgb(70, 46, 3);
+}
+
+/* CONTACTO */
+
+.contactoForm {
+    width: 60%;
+    margin: 2rem;
+}
+
+/*Boton de Whatsapp*/
+
+.whatsapp img {
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    right: 2%;
+    bottom: 20%;
+    z-index: 1;
+}
+
+/* SISTEMA */
+
+.botonesSistema {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.botonesSistema button {
+    background-color: #EAD8CB;
+    border-color: #D1B28A;
+    color: rgb(97, 61, 31);
+    width: 10rem;
+    height: 5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.botonesSistema button:hover {
+    background-color: rgb(133, 101, 75);
+    border-color: #D1B28A;
+    color: white;
+
+}
+
+/* STOCK */
+
+
+
+.formStock {
+    width: 50%;
+    margin: 2rem;
+}
+
+
+.formStock p {
+    font-style: italic;
+    color: rgb(97, 61, 31);
+}
+
+
+.listaDeGins {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.listaDeGins ul li {
+    list-style: none;
+}
+
+/* PLANTA DE EMPLEADOS */
+
+.plantaDeEmpleados p {
+    margin: 0.2rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+}
+
+.plantaDeEmpleadosEncabezado {
+    display: flex;
+    align-items: center;
+}
+
+.plantaDeEmpleadosEncabezado button {
+    background-color: #EAD8CB;
+    border-color: #D1B28A;
+    color: rgb(97, 61, 31);
+    width: 4rem;
+    height: 2rem;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+.plantaDeEmpleadosEncabezado button:hover {
+    background-color: rgb(133, 101, 75);
+    border-color: #D1B28A;
+    color: white;
+
+}
+
+#boton-ver-empleados {
+    width: 60%;
+    margin: 2rem;
+}
+
+.listaDeEmpleados {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.listaDeEmpleados ul li {
+    list-style: none;
+}
+
+.vinetaOla {
+    width: 2rem;
+    margin-left: 2rem;
+}
+
+/* CARGA DE EMPLEADOS */
+
+.formCarga {
+    width: 60%;
+    margin: 2rem;
+}
+
+.titularCarga {
+    display: flex;
+    align-items: center;
+}
+
+.titularCarga p {
+    margin: 0.2rem;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.titularCarga img {
+    margin-bottom: 0.7rem;
+}
+
+#CargarEmpleado {
+    width: 100%;
+}
+
+#buttonPlanta{
+    margin-left: 2rem;
+    width: 60%;
+}
